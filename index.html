@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&family=Righteous&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap"
+            rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="https://routeacademy.github.io/Bookmarker/images/bookmark.png" type="image/x-icon">
+        <title>BookMarker</title>
+    </head>
+    <body >
+        <div class="position-relative">
+            <div class="container">
+                <header class="text-center py-5 d-flex justify-content-center">
+                    <div class="h1">
+                        <h1 class style="font-size: 50px;">Bookmarker</h1>
+                    </div>
+                </header>
+                <div class="w-100 dot py-2"></div>
+                <div class=" d-flex justify-content-center py-3">
+                    <h4 class="text-center "> <i class="fa-solid fa-bookmark"></i>
+                        Bookmark your favorite sites <i
+                            class="fa-solid fa-bookmark"></i></h4>
+                </div>
+                <div class="form m-3">
+                    <label for="site" class="fw-bold"><i
+                            class="fa-solid fa-book-bookmark f me-2"></i> Site
+                        Name</label>
+                    <input type="text" id="site" class="form-control my-2 input"
+                        placeholder="Bookmark Name" oninput="x(this.value);">
+                    <label for="url" class="fw-bold mt-3">
+                        <i class="fa-solid fa-link me-1 "></i> Site URL</label>
+                    <input type="text" id="url" class="form-control my-2 input"
+                        placeholder="Website URL" oninput="y(this.value);">
+                    <div class="text-center my-4">
+                        <button class="btn text-white text-center px-5 submit "
+                            id="btn" onclick="addSite();">Submit</button>
+                    </div>
+                    <div class="w-100 dot py-2"></div>
+                    <table class="table text-center my-3">
+                        <thead>
+                            <th>Index</th>
+                            <th>Website Name</th>
+                            <th>Visit</th>
+                            <th>Delete</th>
+                        </thead>
+                        <tbody id="tbody">
+    
+                        </tbody>
+                    </table>
+    
+                </div>
+    
+            </div>
+        </div>
+        
+        <div class=" ">
+
+            <div class=" d-flex justify-content-center  w-100 position-absolute top-0 align-items-center h-100 z-2 box d-none  " id="box">
+                <div class="bg-white alert shadow-lg py-4">
+                    <div class="m-auto  d-flex justify-content-between ">
+                          <div class="circles d-flex">
+                            <div class="rounded-circle bg-danger me-2"
+                                style="width: 20px;height: 20px;"></div>
+                            <div class="rounded-circle bg-warning me-2"
+                                style="width: 20px;height: 20px;"></div>
+                            <div class="rounded-circle bg-success"
+                                style="width: 20px;height: 20px;"></div>
+                        </div>
+    
+                        <button class="closebtn  m-0 p-0 border-0 bg-white fs-5  " onclick="closepage();
+                        "><i
+                                class="fa-solid fa-x "></i></button>
+                    </div>
+                    <div class="content mt-4">
+                        <p class=" fs-5 line">Site Name or Url is not valid, Please
+                            follow the rules below :</p>
+                        <p class="fs-6"><i
+                                class="fa-regular fa-circle-right fs-5 text-danger mx-2"></i>
+                            Site name must contain at least 3 characters</p>
+                        <p class="fs-6"><i
+                                class="fa-regular fa-circle-right fs-5 text-danger mx-2"></i>
+                            Site URL must be a valid one</p>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+        
+        
+        <script src="bootstrap.bundle.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
